@@ -5,7 +5,8 @@
 - Dockerfile
 - Docker-compose file
 - Makefile
-- Linting via `isort`, `black` and `pylint`
+- Linting using `isort`, `black` and `pylint`
+- Testing using `pytest` and `coverage`
 
 ## Quick start
 
@@ -23,17 +24,44 @@ python venv\Scripts\activate
 ```
 make install
 ```
-4. Lint
-```
-make lint
-```
-1. Run
 
-- Locally
+## Running
+
+Locally
 ```
 make run
 ```
-- In Docker
+
+In Docker
 ```
 make prod
+```
+
+## Linting
+
+```
+make lint
+```
+
+## Testing
+
+### Test coverage
+```
+coverage run -m src.main
+```
+### Testing with coverage html report
+```
+make test
+```
+
+### Test coverage report
+
+Make a report in console
+```
+coverage report
+```
+
+Make a report in html format
+```
+coverage html
 ```
