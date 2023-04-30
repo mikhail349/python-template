@@ -1,5 +1,7 @@
 # Template for your python project
 
+This template can speed up your new project dev environment creation.
+
 ## Includes:
 - `.gitignore` for Python
 - Config file using `pydantic` and `dotenv`
