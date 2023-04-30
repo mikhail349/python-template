@@ -1,6 +1,7 @@
-# Template for python projects
+# Template for your python project
 
 ## Includes:
+- `.gitignore` for Python
 - Config file using `pydantic` and `dotenv`
 - Dockerfile
 - Docker-compose file
