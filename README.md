@@ -10,11 +10,13 @@
 
 ## Quick start
 
-1. Clone the repo 
+1. Create your project using this template
+   
+You can use [this instruction](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for GitHub GUI or use this code for GitHub CLI:
+```
+gh repo create <new-repo-name> --template="mikhail349/python_template"
+```
 
-```
-git clone https://github.com/mikhail349/python_template.git my_project_name
-```
 2. Create and activate virtual environment
 ```
 python -m venv venv
@@ -24,15 +26,13 @@ python venv\Scripts\activate
 ```
 make install
 ```
-
-## Running
-
-Locally
+4. Run project
 ```
 make run
 ```
 
-In Docker
+## Running in Docker
+
 ```
 make prod
 ```
@@ -45,23 +45,7 @@ make lint
 
 ## Testing
 
-### Test coverage
-```
-coverage run -m src.main
-```
-### Testing with coverage html report
 ```
 make test
 ```
-
-### Test coverage report
-
-Make a report in console
-```
-coverage report
-```
-
-Make a report in html format
-```
-coverage html
-```
+Then you can open `htmlcov\index.html` in your browser to view a testing coverage report.
