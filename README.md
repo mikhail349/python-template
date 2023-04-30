@@ -1,5 +1,12 @@
 # Template for python projects
 
+## Includes:
+- Config file using `pydantic` and `dotenv`
+- Dockerfile
+- Docker-compose file
+- Makefile
+- Linting via `isort`, `black` and `pylint`
+
 ## Quick start
 
 1. Clone the repo 
@@ -16,7 +23,11 @@ python venv\Scripts\activate
 ```
 make install
 ```
-4. Run project
+4. Lint
+```
+make lint
+```
+1. Run
 
 - Locally
 ```
