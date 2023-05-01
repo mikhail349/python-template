@@ -17,7 +17,7 @@ This template can speed up your new project dev environment creation.
    
 You can use [this instruction](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for GitHub GUI or use this code for GitHub CLI:
 ```
-gh repo create <new-repo-name> --template="mikhail349/python_template"
+gh repo create <new-repo-name> --template="mikhail349/python-template"
 ```
 
 2. Create and activate virtual environment
