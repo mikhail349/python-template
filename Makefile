@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt -r requirements.dev.txt
+	poetry install
 
 lint:
 	isort src && black src && pylint src
