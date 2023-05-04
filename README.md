@@ -54,3 +54,9 @@ make lint
 make test
 ```
 Then you can open `htmlcov\index.html` in your browser to view a testing coverage report.
+
+
+## Pre-commit
+```
+pre-commit install
+```
