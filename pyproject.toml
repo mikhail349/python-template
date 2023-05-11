@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "This template can speed up your new project dev environment creation"
 authors = ["mikhail349 <mikhail349349@gmail.com>"]
 readme = "README.md"
-packages = [{include = "python_template"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
