@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.11
 
 WORKDIR /app
 
@@ -6,10 +6,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH "${PYTHONPATH}:/"
 
-COPY ./requirements.txt requirements.txt
+COPY ./pyproject.toml pyproject.toml
 
 RUN  pip install --upgrade pip \
-     && pip install -r requirements.txt --no-cache-dir
+    && pip install poetry \
+    && poetry install
 
 COPY ./src /app/src
 
