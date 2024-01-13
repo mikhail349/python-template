@@ -1,5 +1,5 @@
 install_requirements:
-	pip install -r requirements.txt -r requirements.dev.txt
+	poetry install --no-root
 
 check:
 	isort . --check

@@ -2,20 +2,21 @@ FROM python:3.11 as base-image
 
 WORKDIR /app
 
+ENV POETRY_VERSION 1.7.1
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt requirements.txt
-
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install poetry==${POETRY_VERSION}
+
+COPY pyproject.toml poetry.lock ./
 
 FROM base-image as dev-image
-COPY requirements.dev.txt requirements.dev.txt
-RUN pip install -r requirements.dev.txt
+RUN poetry install --no-interaction --no-cache
 CMD [ "python", "-m", "src.main"]
 
 FROM base-image as release-image
+RUN poetry install --no-interaction --no-cache --without dev
 COPY src src
 RUN groupadd -r app \
     && useradd -d /app -r -g app app \
